@@ -1,0 +1,119 @@
+[submodule "agast-helpers"]
+  path = repos/agast-helpers
+  url = git@github.com:bablr-lang/agast-helpers.git
+  branch = trunk
+
+[submodule "agast-vm"]
+  path = repos/agast-vm
+  url = git@github.com:bablr-lang/agast-vm.git
+  branch = trunk
+
+[submodule "agast-vm-helpers"]
+  path = repos/agast-vm-helpers
+  url = git@github.com:bablr-lang/agast-vm-helpers.git
+  branch = trunk
+
+[submodule "agast-vm-strategy-passthrough"]
+  path = repos/agast-vm-strategy-passthrough
+  url = git@github.com:bablr-lang/agast-vm-strategy-passthrough.git
+  branch = trunk
+
+[submodule "bablr"]
+  path = repos/bablr
+  url = git@github.com:bablr-lang/bablr.git
+  branch = trunk
+
+[submodule "bablr-helpers"]
+  path = repos/bablr-helpers
+  url = git@github.com:bablr-lang/bablr-helpers.git
+  branch = trunk
+
+[submodule "bablr-vm"]
+  path = repos/bablr-vm
+  url = git@github.com:bablr-lang/bablr-vm.git
+  branch = trunk
+
+[submodule "bablr-vm-strategy-parse"]
+  path = repos/bablr-vm-strategy-parse
+  url = git@github.com:bablr-lang/bablr-vm-strategy-parse.git
+  branch = trunk
+
+[submodule "bablr-vm-strategy-traverse"]
+  path = repos/bablr-vm-strategy-traverse
+  url = git@github.com:bablr-lang/bablr-vm-strategy-traverse.git
+  branch = trunk
+
+[submodule "boot"]
+  path = repos/boot
+  url = git@github.com:bablr-lang/boot.git
+  branch = trunk
+
+[submodule "coroutine"]
+  path = repos/coroutine
+  url = git@github.com:bablr-lang/coroutine.git
+  branch = trunk
+
+[submodule "eslint-config-base"]
+  path = repos/eslint-config-base
+  url = git@github.com:bablr-lang/eslint-config-base.git
+  branch = trunk
+
+[submodule "language-bablr-vm-instruction"]
+  path = repos/language-bablr-vm-instruction
+  url = git@github.com:bablr-lang/language-bablr-vm-instruction.git
+  branch = trunk
+
+[submodule "language-blank-space"]
+  path = repos/language-blank-space
+  url = git@github.com:bablr-lang/language-blank-space.git
+  branch = trunk
+
+[submodule "language-c-comments"]
+  path = repos/language-c-comments
+  url = git@github.com:bablr-lang/language-c-comments.git
+  branch = trunk
+
+[submodule "language-cstml"]
+  path = repos/language-cstml
+  url = git@github.com:bablr-lang/language-cstml.git
+  branch = trunk
+
+[submodule "language-json"]
+  path = repos/language-json
+  url = git@github.com:bablr-lang/language-json.git
+  branch = trunk
+
+[submodule "language-regex-vm-pattern"]
+  path = repos/language-regex-vm-pattern
+  url = git@github.com:bablr-lang/language-regex-vm-pattern.git
+  branch = trunk
+
+[submodule "language-spamex"]
+  path = repos/language-spamex
+  url = git@github.com:bablr-lang/language-spamex.git
+  branch = trunk
+
+[submodule "language_enhancer-debug-log"]
+  path = repos/language_enhancer-debug-log
+  url = git@github.com:bablr-lang/language_enhancer-debug-log.git
+  branch = trunk
+
+[submodule "regex-vm"]
+  path = repos/regex-vm
+  url = git@github.com:bablr-lang/regex-vm.git
+  branch = trunk
+
+[submodule "strategy_enhancer-debug-log"]
+  path = repos/strategy_enhancer-debug-log
+  url = git@github.com:bablr-lang/strategy_enhancer-debug-log.git
+  branch = trunk
+
+[submodule "test-runner"]
+  path = repos/test-runner
+  url = git@github.com:bablr-lang/test-runner.git
+  branch = trunk
+
+[submodule "weak-stack"]
+  path = repos/weak-stack
+  url = git@github.com:bablr-lang/weak-stack.git
+  branch = trunk
