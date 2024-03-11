@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "simple-git": "3.22.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
+}
