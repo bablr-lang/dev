@@ -48,6 +48,11 @@
   url = git@github.com:bablr-lang/boot.git
   branch = trunk
 
+[submodule "boot-helpers"]
+  path = repos/boot-helpers
+  url = git@github.com:bablr-lang/boot-helpers.git
+  branch = trunk
+
 [submodule "coroutine"]
   path = repos/coroutine
   url = git@github.com:bablr-lang/coroutine.git
