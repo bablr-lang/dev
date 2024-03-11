@@ -9,28 +9,28 @@
       "request": "launch",
       "name": "Play",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/dev/play/index.js"
+      "program": "${workspaceFolder}/play/index.js"
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Test agAST-vm",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/agast-vm/test/runner.js"
+      "program": "${workspaceFolder}/repos/agast-vm/test/runner.js"
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Test language-regex",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/language-regex-vm-pattern/test/test.js"
+      "program": "${workspaceFolder}/repos/language-regex-vm-pattern/test/test.js"
     },
     {
       "command": "./node_modules/.bin/babel play/test.js",
       "name": "Test shorthand.macro",
       "request": "launch",
       "type": "node-terminal",
-      "cwd": "${workspaceFolder}/boot"
+      "cwd": "${workspaceFolder}/repos/boot"
     }
   ]
 }
