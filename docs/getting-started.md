@@ -10,6 +10,6 @@ Steps:
 
 Now that you have the code checked out try running a basic example.
 
-- `node dev/play`
+- `node play`
 
-Now try editing `dev/play/fixture.js` to parse something different!
+Now try editing `play/fixture.js` to parse something different!
