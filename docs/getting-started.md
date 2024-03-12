@@ -10,7 +10,7 @@ Steps:
 - `cd bablr-dev`
 - `git submodule init`
 - If you are using HTTPS (for read-only access):
-  - `node bablr-dev/scripts/use-https-submodules.js`
+  - `node scripts/use-https-submodules.js`
 - `git submodule update`
 - `pnpm i`
 
