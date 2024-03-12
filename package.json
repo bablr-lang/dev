@@ -36,6 +36,7 @@
     "prettier": "^2.6.2"
   },
   "scripts": {
-    "link-packages": "./scripts/link-packages.js"
+    "link-packages": "./scripts/link-packages.js",
+    "use-https-submodules": "./scripts/clone-https-submodules.js"
   }
 }
