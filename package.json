@@ -25,7 +25,8 @@
     "@bablr/test-runner": "*",
     "@bablr/weak-stack": "*",
     "bablr": "*",
-    "indent-string": "5.0.0"
+    "indent-string": "5.0.0",
+    "iter-tools-es": "7.5.3"
   },
   "devDependencies": {
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#c040bc95f2dddac160628e4757a412016044b3ef",
