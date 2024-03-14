@@ -21,17 +21,16 @@ const agastCtx = AgastContext.create();
 const ctx = Context.from(agastCtx.facade, log(language, '    '));
 const source = Source.from(sourceText);
 
-const terminals = runSync(
-  agastEvaluate(
-    agastCtx,
-    logStrategy(evaluate(ctx, source, createParseStrategy(matcher, props)), '  '),
-  ),
-);
-
 const printed = printPrettyCSTML(
-  tap((terminal) => {
-    console.log('>>>', printTerminal(terminal));
-  }, terminals),
+  tap(
+    (terminal) => console.log(`>>> ${printTerminal(terminal)}`),
+    runSync(
+      agastEvaluate(
+        agastCtx,
+        logStrategy(evaluate(ctx, source, createParseStrategy(matcher, props)), '  '),
+      ),
+    ),
+  ),
 );
 
 console.log();
