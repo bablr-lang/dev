@@ -15,7 +15,7 @@ export { treeFromStreamSync, treeFromStreamAsync } from '@bablr/agast-helpers/tr
 
 export function streamParse(language, sourceText, matcher, props) {
   const agastCtx = AgastContext.create();
-  const ctx = Context.from(agastCtx, language);
+  const ctx = Context.from(agastCtx.facade, language);
   const source = Source.from(sourceText);
 
   return runSync(
