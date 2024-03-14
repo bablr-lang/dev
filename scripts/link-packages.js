@@ -1,7 +1,7 @@
 #! /usr/bin/env node
-import { readFile, readdir, stat, unlink } from 'fs/promises';
 
-const local = (...args) => new URL(`../${String.raw(...args)}`, import.meta.url).pathname;
+import { readFile, readdir, stat, unlink } from 'fs/promises';
+import { local } from './utils/path.js';
 
 for (const repo of await readdir(local`repos`)) {
   const stats = await stat(local`repos/${repo}`);
@@ -10,7 +10,7 @@ for (const repo of await readdir(local`repos`)) {
     let pkg;
 
     try {
-      pkg = JSON.parse(await readFile(local`repos/${repo}/package.json`));
+      pkg = JSON.parse(await readFile(local`repos/${repo}/package.json`, 'utf-8'));
     } catch (e) {}
 
     if (pkg?.name) {

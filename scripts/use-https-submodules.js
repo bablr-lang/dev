@@ -1,9 +1,8 @@
 #! /usr/bin/env node
 
-import { readFile, readdir, stat, unlink } from 'fs/promises';
+import { readFile, readdir, stat } from 'fs/promises';
 import { exec } from 'child_process';
-
-const local = (...args) => new URL(`../${String.raw(...args)}`, import.meta.url).pathname;
+import { local } from './utils/path.js';
 
 const useHTTPSRemote = (repo) => {
   const opts = { cwd: local`repos/${repo}` };
@@ -18,7 +17,7 @@ for (const repo of await readdir(local`repos`)) {
     let pkg;
 
     try {
-      pkg = JSON.parse(await readFile(local`repos/${repo}/package.json`));
+      pkg = JSON.parse(await readFile(local`repos/${repo}/package.json`, 'utf-8'));
     } catch (e) {}
 
     if (pkg?.name) {
