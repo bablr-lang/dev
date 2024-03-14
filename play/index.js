@@ -10,7 +10,6 @@ import { enhanceStrategyWithDebugLogging as logStrategy } from '@bablr/strategy_
 import { createParseStrategy } from '@bablr/bablr-vm-strategy-parse';
 
 import { sourceText, language, matcher } from './fixture.js';
-import indent from 'indent-string';
 
 export { treeFromStreamSync, treeFromStreamAsync } from '@bablr/agast-helpers/tree';
 
