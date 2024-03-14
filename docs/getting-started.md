@@ -22,4 +22,6 @@ Now try editing `play/fixture.js` to parse something different!
 
 ### Debugging
 
-Debugging is easiest in VSCode at the moment. Try `pnpm run link-packages` before debugging: it ensures your breakpoints will hit by coercing pnpm to use in-tree source files instead of shipped code.
+Debugging is easiest in VSCode at the moment. You should be able to hit breakpoints defined in any repository.
+
+This works using a custom `postinstall` script which does something like `rm repos/*/node_modules/@bablr`. This allows resolution of in-org dependencies to fall back to what is configured in this `dev` repo. PNPM handles the workspace linking because in `dev` we specify that the versions we depend on are semver `*`. This is a workaround for a limitation of PNPM.
