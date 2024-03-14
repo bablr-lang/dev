@@ -27,6 +27,7 @@ export function streamParse(language, sourceText, matcher, props) {
   );
 }
 
+console.log();
 console.log(`Input: \`${sourceText.replace(/[`\\]/g, '\\$&')}\``);
 console.log();
 
@@ -39,4 +40,4 @@ const printed = printPrettyCSTML(
 );
 
 console.log();
-console.log(indent(printed, 4));
+console.log(printed);
