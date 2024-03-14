@@ -22,12 +22,13 @@ export function streamParse(language, sourceText, matcher, props) {
   return runSync(
     agastEvaluate(
       agastCtx,
-      evaluate(ctx, source, logStrategy(createParseStrategy(matcher, props), '  ')),
+      logStrategy(evaluate(ctx, source, createParseStrategy(matcher, props)), '  '),
     ),
   );
 }
 
 console.log(`Input: \`${sourceText.replace(/[`\\]/g, '\\$&')}\``);
+console.log();
 
 const terminals = streamParse(log(language, '    '), sourceText, matcher);
 
