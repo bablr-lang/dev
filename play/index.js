@@ -1,9 +1,11 @@
 /* global console, URL, globalThis */
 
 import tap from 'iter-tools-es/methods/tap';
+import map from 'iter-tools-es/methods/map';
 import { evaluate as agastEvaluate, Context as AgastContext } from '@bablr/agast-vm';
 import { evaluate, Context, Source } from '@bablr/bablr-vm';
 import { runSync } from '@bablr/agast-vm-helpers/run';
+import { buildDependentLanguages } from '@bablr/helpers/grammar';
 import { printPrettyCSTML, printTerminal } from '@bablr/agast-helpers/stream';
 import { enhanceWithDebugLogging as log } from '@bablr/language_enhancer-debug-log';
 import { enhanceStrategyWithDebugLogging as logStrategy } from '@bablr/strategy_enhancer-debug-log';
@@ -18,7 +20,15 @@ console.log(`Input: \`${sourceText.replace(/[`\\]/g, '\\$&')}\``);
 console.log();
 
 const agastCtx = AgastContext.create();
-const ctx = Context.from(agastCtx.facade, log(language, '    '));
+const ctx = Context.from(
+  agastCtx.facade,
+  new Map(
+    map(
+      ({ 0: url, 1: language }) => ({ 0: url, 1: log(language, '    ') }),
+      buildDependentLanguages(language),
+    ),
+  ),
+);
 const source = Source.from(sourceText);
 
 const printed = printPrettyCSTML(

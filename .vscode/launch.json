@@ -26,7 +26,7 @@
       "program": "${workspaceFolder}/repos/language-regex-vm-pattern/test/test.js"
     },
     {
-      "command": "./node_modules/.bin/babel play/test.js",
+      "command": "./node_modules/.bin/babel play/fixture.js",
       "name": "Test shorthand.macro",
       "request": "launch",
       "type": "node-terminal",
