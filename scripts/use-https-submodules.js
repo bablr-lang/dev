@@ -1,21 +1,13 @@
 #! /usr/bin/env node
 
-import { readdir, stat } from 'fs/promises';
+import { readFile, writeFile } from 'fs/promises';
 import { exec } from 'child_process';
 import { local } from './utils/path.js';
 
-const useHTTPSRemote = (repo) => {
-  const opts = { cwd: local`repos/${repo}` };
-  exec('git remote remove origin', opts);
-  exec(`git remote add origin https://github.com/bablr-lang/${repo}`, opts);
-};
+const modulesFileContent = await readFile(local`.gitmodules`, 'utf8');
 
-for (const repo of await readdir(local`repos`)) {
-  const stats = await stat(local`repos/${repo}`);
+await writeFile(
+  modulesFileContent.replace(/(\s*url\s*=\s*)git@github.com:(.*)/g, '$1https://github.com/$2'),
+);
 
-  if (!repo.startsWith('.') && stats.isDirectory()) {
-    try {
-      useHTTPSRemote(repo);
-    } catch (e) {}
-  }
-}
+exec('git submodule sync', { cwd: local`` });

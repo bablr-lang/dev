@@ -8,9 +8,9 @@ Steps:
   - SSH: `git clone git@github.com/bablr-lang/dev.git bablr-dev`
   - HTTPS: `git clone https://github.com/bablr-lang/dev.git bablr-dev`
 - `cd bablr-dev`
-- `git submodule init`
 - If you are using HTTPS (for read-only access):
   - `node scripts/use-https-submodules.js`
+- `git submodule init`
 - `git submodule update`
 - `pnpm i`
 
