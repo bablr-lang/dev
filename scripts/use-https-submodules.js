@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 import { readFile, writeFile } from 'fs/promises';
-import { exec } from 'child_process';
+import { execSync as exec } from 'child_process';
 import { local } from './utils/path.js';
 
 const modulesFileContent = await readFile(local`.gitmodules`, 'utf8');
