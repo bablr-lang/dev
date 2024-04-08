@@ -15,8 +15,8 @@ const enhancers = {
   bablrProduction: createProductionLogger('    '),
 };
 
-const cstml = buildTag(language, 'Fragment', {}, enhancers);
+const cstml = buildTag(language, 'Expression', {}, enhancers);
 
-const tree = cstml`<> </>`;
+const tree = cstml`<> ${cstml`<*Word>${cstml`'ok'`}</>`} </>`;
 
 printColorfulCSTML(printPrettyCSTML(tree));
