@@ -23,6 +23,10 @@ for (const repo of await readdir(local`repos`)) {
       for (const module_ of modules) {
         await unlink(local`repos/${repo}/node_modules/@bablr/${module_}`);
       }
+
+      try {
+        await unlink(local`repos/${repo}/node_modules/bablr`);
+      } catch (e) {}
     }
   }
 }

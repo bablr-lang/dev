@@ -1,22 +1,35 @@
 /* global global, console, URL, globalThis, process */
-import { buildTag } from 'bablr';
-import { printPrettyCSTML } from '@bablr/agast-helpers/tree';
-import { printColorfulCSTML } from './syntax.js';
+
+import indent from 'indent-string';
+import { streamParse, buildTag } from 'bablr/enhanceable';
+import { debugEnhancers } from '@bablr/helpers/enhancers';
+import { printPrettyCSTML } from '@bablr/agast-helpers/stream';
 import {
-  enhanceStrategyBuilderWithDebugLogging as logStrategy,
-  enhanceStrategyBuilderWithEmittedLogging as logEmitted,
-} from '@bablr/strategy_enhancer-debug-log';
-import { enhanceProductionWithDebugLogging as createProductionLogger } from '@bablr/language_enhancer-debug-log';
-import * as language from '@bablr/language-cstml';
+  printPrettyCSTML as printPrettyCSTMLFromTree,
+  printSource,
+} from '@bablr/agast-helpers/tree';
 
-const enhancers = {
-  runStrategy: (strategy) => logEmitted(strategy, '>>> '),
-  agastStrategy: (strategy) => logStrategy(strategy, '      '),
-  bablrProduction: createProductionLogger('    '),
-};
+import { sourceText, language, type, props } from './fixture.js';
+import { printColorfulCSTML } from './syntax.js';
 
-const cstml = buildTag(language, 'Expression', {}, enhancers);
+global.__printSource = printSource;
 
+// console.log();
+// console.log(`Input: \`${sourceText.replace(/[`\\]/g, '\\$&')}\``);
+// console.log();
+
+const cstml = buildTag(language, 'Expression', props, debugEnhancers);
+// const expr = buildTag(language, 'Expression', {}, enhancers);
+
+// const printed = printPrettyCSTML(streamParse(language, type, sourceText, props, enhancers));
+// const tree = cstml.Node`<Node></>`;
 const tree = cstml`<> ${cstml`<*Word>${cstml`'ok'`}</>`} </>`;
+// const tree = cstml`eat(/[ \t\r\n]+/)`;
+const printed = printPrettyCSTMLFromTree(tree);
 
-printColorfulCSTML(printPrettyCSTML(tree));
+console.log();
+
+// printColorfulCSTML(printed);
+printColorfulCSTML(indent(printed, 2));
+// console.log(indent(printed, 2));
+// console.log(printed);

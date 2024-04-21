@@ -23,6 +23,11 @@
   url = git@github.com:bablr-lang/bablr.git
   branch = trunk
 
+[submodule "bablr-cli"]
+  path = repos/bablr-cli
+  url = git@github.com:bablr-lang/bablr-cli.git
+  branch = trunk
+
 [submodule "bablr-helpers"]
   path = repos/bablr-helpers
   url = git@github.com:bablr-lang/bablr-helpers.git

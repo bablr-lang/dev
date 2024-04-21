@@ -1,20 +1,17 @@
 /* global process */
 
 import ansi from 'ansi';
-import { buildSpamMatcher } from '@bablr/agast-vm-helpers/builders';
 import * as cstml from '@bablr/language-cstml';
-import { streamParseSync as streamParse } from 'bablr/enhanceable';
+import { streamParse } from 'bablr/enhanceable';
 
 export const printColorfulCSTML = (printed) => {
-  const spamFragment = buildSpamMatcher('Document');
-
   const output = ansi(process.stdout);
 
   output.bold().grey();
 
   let isString = false;
 
-  for (const token of streamParse(cstml, printed, spamFragment)) {
+  for (const token of streamParse(cstml, 'Document', printed)) {
     if (token.type === 'OpenNodeTag') {
       if (token.value.type === 'String') {
         isString = true;

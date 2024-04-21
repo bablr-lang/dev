@@ -27,13 +27,19 @@
     },
     {
       "type": "node",
+      "request": "attach",
+      "name": "CLI with --inspect-brk",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
       "request": "launch",
       "name": "Test language-cstml",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/repos/language-cstml/test/test.js"
     },
     {
-      "command": "./node_modules/.bin/babel play/fixture.js",
+      "command": "pnpm exec babel play/fixture.js",
       "name": "Test shorthand.macro",
       "request": "launch",
       "type": "node-terminal",
