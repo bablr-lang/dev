@@ -18,18 +18,24 @@ global.__printSource = printSource;
 // console.log(`Input: \`${sourceText.replace(/[`\\]/g, '\\$&')}\``);
 // console.log();
 
-const cstml = buildTag(language, 'Expression', props, debugEnhancers);
+const cstml = buildTag(language, 'Node', props, debugEnhancers);
 // const expr = buildTag(language, 'Expression', {}, enhancers);
 
 // const printed = printPrettyCSTML(streamParse(language, type, sourceText, props, enhancers));
 // const tree = cstml.Node`<Node></>`;
-const tree = cstml`<> ${cstml`<*Word>${cstml`'ok'`}</>`} </>`;
+const tree = cstml`
+<@EscapeSequence cooked='4660'>
+  escape:
+  <*Punctuator>
+    '\\'
+  </>
+</>`;
 // const tree = cstml`eat(/[ \t\r\n]+/)`;
 const printed = printPrettyCSTMLFromTree(tree);
 
 console.log();
 
-// printColorfulCSTML(printed);
 printColorfulCSTML(indent(printed, 2));
 // console.log(indent(printed, 2));
-// console.log(printed);
+
+console.log();
