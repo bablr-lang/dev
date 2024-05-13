@@ -8,6 +8,7 @@
     "@bablr/helpers": "*",
     "@bablr/bablr-vm": "*",
     "@bablr/bablr-vm-strategy-parse": "*",
+    "@bablr/bablr-vm-strategy-traverse": "*",
     "@bablr/boot": "*",
     "@bablr/boot-helpers": "*",
     "@bablr/coroutine": "*",

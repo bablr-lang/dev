@@ -15,7 +15,7 @@ export const printColorfulCSTML = (printed) => {
     if (token.type === 'OpenNodeTag') {
       if (token.value.type === 'String') {
         isString = true;
-        output.green();
+        output.reset().green();
       } else if (!isString) {
         if (['Punctuator', 'Keyword'].includes(token.value.type)) {
           output.bold().grey();
@@ -34,6 +34,8 @@ export const printColorfulCSTML = (printed) => {
 
     if (token.type === 'Literal') {
       output.write(token.value);
+    } else if (token.type === 'OpenNodeTag' && token.value.flags.intrinsic) {
+      output.write(token.value.intrinsicValue);
     }
   }
 
