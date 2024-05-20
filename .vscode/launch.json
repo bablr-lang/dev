@@ -27,6 +27,13 @@
     },
     {
       "type": "node",
+      "request": "launch",
+      "name": "Play with regex-vm",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/repos/regex-vm/play.js"
+    },
+    {
+      "type": "node",
       "request": "attach",
       "name": "CLI with --inspect-brk",
       "skipFiles": ["<node_internals>/**"]
