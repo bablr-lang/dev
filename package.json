@@ -20,6 +20,8 @@
     "@bablr/language-json": "*",
     "@bablr/language-regex-vm-pattern": "*",
     "@bablr/language-spamex": "*",
+    "@bablr/macrome": "*",
+    "@bablr/macrome-generator-bablr": "*",
     "@bablr/language_enhancer-debug-log": "*",
     "@bablr/regex-vm": "*",
     "@bablr/strategy_enhancer-debug-log": "*",

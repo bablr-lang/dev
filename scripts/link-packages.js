@@ -27,6 +27,14 @@ for (const repo of await readdir(local`repos`)) {
       try {
         await unlink(local`repos/${repo}/node_modules/bablr`);
       } catch (e) {}
+
+      try {
+        await unlink(local`repos/${repo}/node_modules/.bin/bablr`);
+      } catch (e) {}
+
+      try {
+        await unlink(local`repos/${repo}/node_modules/.bin/macrome`);
+      } catch (e) {}
     }
   }
 }
