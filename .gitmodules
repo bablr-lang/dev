@@ -88,10 +88,10 @@
   url = git@github.com:bablr-lang/language-cstml.git
   branch = trunk
 
-# [submodule "language-javascript"]
-#   path = repos/language-javascript
-#   url = git@github.com:bablr-lang/language-javascript.git
-#   branch = trunk
+[submodule "language-es3"]
+  path = repos/language-es3
+  url = git@github.com:bablr-lang/language-es3.git
+  branch = trunk
 
 [submodule "language-json"]
   path = repos/language-json
@@ -131,11 +131,6 @@
 [submodule "strategy_enhancer-debug-log"]
   path = repos/strategy_enhancer-debug-log
   url = git@github.com:bablr-lang/strategy_enhancer-debug-log.git
-  branch = trunk
-
-[submodule "test-runner"]
-  path = repos/test-runner
-  url = git@github.com:bablr-lang/test-runner.git
   branch = trunk
 
 [submodule "weak-stack"]

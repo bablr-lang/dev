@@ -8,8 +8,8 @@ import {
   printPrettyCSTML as printPrettyCSTMLFromTree,
   printSource,
 } from '@bablr/agast-helpers/tree';
-// import * as language from '@bablr/language-cstml';
-import * as language from '@bablr/language-json';
+import * as language from '@bablr/language-es3/regex';
+// import * as language from '@bablr/language-json';
 // import * as language from '@bablr/language-regex-vm-pattern';
 // import * as language from '@bablr/language-bablr-vm-instruction';
 
@@ -22,12 +22,15 @@ global.__printSource = printSource;
 // console.log(`Input: \`${sourceText.replace(/[`\\]/g, '\\$&')}\``);
 // console.log();
 
-const tag = buildTag(language, 'Expression', null, debugEnhancers);
+const tag = buildTag(language, 'Pattern', null, debugEnhancers);
 // const expr = buildTag(language, 'Expression', {}, enhancers);
 
-// const printed = printPrettyCSTML(streamParse(language, 'Pattern', '/.*/', {}, debugEnhancers));
+// const printed = printPrettyCSTML(
+//   streamParse(language, 'Pattern', String.raw`/()\2/`, {}, debugEnhancers),
+// );
 // const tree = tag.Node`<Node></>`;
-const tree = tag` [ 1, -22, 3 ] `;
+// const tree = tag`switch(null) { case default: throw new Error() }`;
+const tree = tag`/()\2/`;
 // const tree = tag`eat(/[ \t\r\n]+/)`;
 const printed = printPrettyCSTMLFromTree(tree);
 
