@@ -18,6 +18,11 @@
   url = git@github.com:bablr-lang/agast-vm-strategy-passthrough.git
   branch = trunk
 
+[submodule "ansi-vm"]
+  path = repos/ansi-vm
+  url = git@github.com:bablr-lang/ansi-vm.git
+  branch = trunk
+
 [submodule "bablr"]
   path = repos/bablr
   url = git@github.com:bablr-lang/bablr.git

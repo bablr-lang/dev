@@ -1,10 +1,12 @@
 /* global global, console, URL, globalThis, process */
 
+import { pipeline } from 'node:stream/promises';
+import { createWriteStream } from 'node:fs';
 import indent from 'indent-string';
 import { streamParse, buildTag } from 'bablr/enhanceable';
 import { debugEnhancers } from '@bablr/helpers/enhancers';
-import { printPrettyCSTML } from '@bablr/agast-helpers/stream';
 import {
+  streamFromTree,
   printPrettyCSTML as printPrettyCSTMLFromTree,
   printSource,
 } from '@bablr/agast-helpers/tree';
@@ -14,7 +16,7 @@ import * as language from '@bablr/language-es3/regex';
 // import * as language from '@bablr/language-bablr-vm-instruction';
 
 // import { sourceText, language, type, props } from './fixture.js';
-import { printColorfulCSTML } from './syntax.js';
+import { generateColorfulCSTML } from '@bablr/cli/syntax';
 
 global.__printSource = printSource;
 
@@ -22,7 +24,7 @@ global.__printSource = printSource;
 // console.log(`Input: \`${sourceText.replace(/[`\\]/g, '\\$&')}\``);
 // console.log();
 
-const tag = buildTag(language, 'Pattern', null, debugEnhancers);
+const tag = buildTag(language, 'Pattern', null);
 // const expr = buildTag(language, 'Expression', {}, enhancers);
 
 // const printed = printPrettyCSTML(
@@ -32,11 +34,12 @@ const tag = buildTag(language, 'Pattern', null, debugEnhancers);
 // const tree = tag`switch(null) { case default: throw new Error() }`;
 const tree = tag`/()\2/`;
 // const tree = tag`eat(/[ \t\r\n]+/)`;
-const printed = printPrettyCSTMLFromTree(tree);
+const tokens = streamFromTree(tree);
 
 console.log();
 
-printColorfulCSTML(indent(printed, 2));
+pipeline(generateColorfulCSTML(tokens), process.stdout);
+
 // console.log(indent(printed, 2));
 
 console.log();

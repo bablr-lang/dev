@@ -5,12 +5,14 @@
     "@bablr/agast-vm": "*",
     "@bablr/agast-vm-helpers": "*",
     "@bablr/agast-vm-strategy-passthrough": "*",
+    "@bablr/ansi-vm": "*",
     "@bablr/helpers": "*",
     "@bablr/bablr-vm": "*",
     "@bablr/bablr-vm-strategy-parse": "*",
     "@bablr/bablr-vm-strategy-traverse": "*",
     "@bablr/boot": "*",
     "@bablr/boot-helpers": "*",
+    "@bablr/cli": "*",
     "@bablr/coroutine": "*",
     "@bablr/eslint-config-base": "*",
     "@bablr/language-bablr-vm-instruction": "*",
@@ -32,7 +34,6 @@
     "iter-tools-es": "7.5.3"
   },
   "devDependencies": {
-    "ansi": "0.3.1",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.32.0",
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",
