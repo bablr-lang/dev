@@ -10,8 +10,8 @@ import {
   printPrettyCSTML as printPrettyCSTMLFromTree,
   printSource,
 } from '@bablr/agast-helpers/tree';
-import * as language from '@bablr/language-es3/regex';
-// import * as language from '@bablr/language-json';
+// import * as language from '@bablr/language-es3/regex';
+import * as language from '@bablr/language-json';
 // import * as language from '@bablr/language-regex-vm-pattern';
 // import * as language from '@bablr/language-bablr-vm-instruction';
 
@@ -24,7 +24,7 @@ global.__printSource = printSource;
 // console.log(`Input: \`${sourceText.replace(/[`\\]/g, '\\$&')}\``);
 // console.log();
 
-const tag = buildTag(language, 'Pattern', null);
+const tag = buildTag(language, 'Expression', null);
 // const expr = buildTag(language, 'Expression', {}, enhancers);
 
 // const printed = printPrettyCSTML(
@@ -32,7 +32,7 @@ const tag = buildTag(language, 'Pattern', null);
 // );
 // const tree = tag.Node`<Node></>`;
 // const tree = tag`switch(null) { case default: throw new Error() }`;
-const tree = tag`/()\2/`;
+const tree = tag`[1, 2, 3]`;
 // const tree = tag`eat(/[ \t\r\n]+/)`;
 const tokens = streamFromTree(tree);
 
