@@ -88,6 +88,11 @@
   url = git@github.com:bablr-lang/language-json.git
   branch = trunk
 
+[submodule "language-uiua"]
+  path = repos/language-uiua
+  url = git@github.com:bablr-lang/language-uiua.git
+  branch = trunk
+
 [submodule "language-regex-vm-pattern"]
   path = repos/language-regex-vm-pattern
   url = git@github.com:bablr-lang/language-regex-vm-pattern.git
