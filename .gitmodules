@@ -13,11 +13,6 @@
   url = git@github.com:bablr-lang/agast-vm-helpers.git
   branch = trunk
 
-[submodule "agast-vm-strategy-passthrough"]
-  path = repos/agast-vm-strategy-passthrough
-  url = git@github.com:bablr-lang/agast-vm-strategy-passthrough.git
-  branch = trunk
-
 [submodule "ansi-vm"]
   path = repos/ansi-vm
   url = git@github.com:bablr-lang/ansi-vm.git
@@ -46,11 +41,6 @@
 [submodule "bablr-vm-strategy-parse"]
   path = repos/bablr-vm-strategy-parse
   url = git@github.com:bablr-lang/bablr-vm-strategy-parse.git
-  branch = trunk
-
-[submodule "bablr-vm-strategy-traverse"]
-  path = repos/bablr-vm-strategy-traverse
-  url = git@github.com:bablr-lang/bablr-vm-strategy-traverse.git
   branch = trunk
 
 [submodule "boot"]
@@ -91,11 +81,6 @@
 [submodule "language-cstml"]
   path = repos/language-cstml
   url = git@github.com:bablr-lang/language-cstml.git
-  branch = trunk
-
-[submodule "language-es3"]
-  path = repos/language-es3
-  url = git@github.com:bablr-lang/language-es3.git
   branch = trunk
 
 [submodule "language-json"]

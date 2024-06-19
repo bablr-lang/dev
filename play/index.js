@@ -10,36 +10,24 @@ import {
   printPrettyCSTML as printPrettyCSTMLFromTree,
   printSource,
 } from '@bablr/agast-helpers/tree';
-// import * as language from '@bablr/language-es3/regex';
-import * as language from '@bablr/language-json';
-// import * as language from '@bablr/language-regex-vm-pattern';
+import { printPrettyCSTML as printCSTMLStream } from '@bablr/agast-helpers/stream';
+// import * as language from '@bablr/language-es3';
+// import * as language from '@bablr/language-cstml';
+import * as language from '@bablr/language-regex-vm-pattern';
 // import * as language from '@bablr/language-bablr-vm-instruction';
 
 // import { sourceText, language, type, props } from './fixture.js';
-import { generateColorfulCSTML } from '@bablr/cli/syntax';
+import { generateCSTML } from '@bablr/cli/syntax';
 
 global.__printSource = printSource;
 
-// console.log();
-// console.log(`Input: \`${sourceText.replace(/[`\\]/g, '\\$&')}\``);
-// console.log();
+const tag = buildTag(language, 'Pattern', null, debugEnhancers);
 
-const tag = buildTag(language, 'Expression', null);
-// const expr = buildTag(language, 'Expression', {}, enhancers);
+// const tokens = [...streamParse(language, 'Fragment', `<><Node></></>`, {}, debugEnhancers)];
 
-// const printed = printPrettyCSTML(
-//   streamParse(language, 'Pattern', String.raw`/()\2/`, {}, debugEnhancers),
-// );
-// const tree = tag.Node`<Node></>`;
-// const tree = tag`switch(null) { case default: throw new Error() }`;
-const tree = tag`[1, 2, 3]`;
-// const tree = tag`eat(/[ \t\r\n]+/)`;
+const tree = tag`/a+/`;
 const tokens = streamFromTree(tree);
 
 console.log();
 
-pipeline(generateColorfulCSTML(tokens), process.stdout);
-
-// console.log(indent(printed, 2));
-
-console.log();
+pipeline(generateCSTML(tokens, { color: false, format: true }), process.stdout);
