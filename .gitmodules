@@ -132,3 +132,8 @@
   path = repos/language-uiua
   url = git@github.com:bablr-lang/language-uiua.git
   branch = trunk
+
+[submodule "errawr"]
+  path = repos/errawr
+  url = git@github.com:bablr-lang/errawr.git
+  branch = trunk
