@@ -13,9 +13,9 @@
   url = git@github.com:bablr-lang/agast-vm-helpers.git
   branch = trunk
 
-[submodule "ansi-vm"]
-  path = repos/ansi-vm
-  url = git@github.com:bablr-lang/ansi-vm.git
+[submodule "io-vm-node"]
+  path = repos/io-vm-node
+  url = git@github.com:bablr-lang/io-vm-node.git
   branch = trunk
 
 [submodule "bablr"]
@@ -61,6 +61,11 @@
 [submodule "eslint-config-base"]
   path = repos/eslint-config-base
   url = git@github.com:bablr-lang/eslint-config-base.git
+  branch = trunk
+
+[submodule "language-bablr-cli-verbose-output"]
+  path = repos/language-bablr-cli-verbose-output
+  url = git@github.com:bablr-lang/language-bablr-cli-verbose-output.git
   branch = trunk
 
 [submodule "language-bablr-vm-instruction"]
