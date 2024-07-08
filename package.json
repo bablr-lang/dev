@@ -12,6 +12,7 @@
     "@bablr/boot-helpers": "*",
     "@bablr/cli": "*",
     "@bablr/coroutine": "*",
+    "@bablr/language-bablr-cli-verbose-output": "*",
     "@bablr/language-bablr-vm-instruction": "*",
     "@bablr/language-blank-space": "*",
     "@bablr/language-c-comments": "*",
