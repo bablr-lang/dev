@@ -20,7 +20,7 @@ import { generatePrettyCSTMLStrategy } from '@bablr/agast-helpers/stream';
 // import * as language from '@bablr/language-en-bablr-cli-verbose-output';
 
 // import { sourceText, language, type, props } from './fixture.js';
-// import { createPrintCSTMLStrategy } from '@bablr/cli/syntax';
+import { createPrintCSTMLStrategy } from '@bablr/cli/syntax';
 
 global.__printSource = printSource;
 
