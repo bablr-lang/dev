@@ -63,44 +63,44 @@
   url = git@github.com:bablr-lang/eslint-config-base.git
   branch = trunk
 
-[submodule "language-bablr-cli-verbose-output"]
-  path = repos/language-bablr-cli-verbose-output
-  url = git@github.com:bablr-lang/language-bablr-cli-verbose-output.git
+[submodule "language-en-bablr-cli-verbose-output"]
+  path = repos/language-en-bablr-cli-verbose-output
+  url = git@github.com:bablr-lang/language-en-bablr-cli-verbose-output.git
   branch = trunk
 
-[submodule "language-bablr-vm-instruction"]
-  path = repos/language-bablr-vm-instruction
-  url = git@github.com:bablr-lang/language-bablr-vm-instruction.git
+[submodule "language-en-bablr-vm-instruction"]
+  path = repos/language-en-bablr-vm-instruction
+  url = git@github.com:bablr-lang/language-en-bablr-vm-instruction.git
   branch = trunk
 
-[submodule "language-blank-space"]
-  path = repos/language-blank-space
-  url = git@github.com:bablr-lang/language-blank-space.git
+[submodule "language-en-blank-space"]
+  path = repos/language-en-blank-space
+  url = git@github.com:bablr-lang/language-en-blank-space.git
   branch = trunk
 
-[submodule "language-c-comments"]
-  path = repos/language-c-comments
-  url = git@github.com:bablr-lang/language-c-comments.git
+[submodule "language-en-c-comments"]
+  path = repos/language-en-c-comments
+  url = git@github.com:bablr-lang/language-en-c-comments.git
   branch = trunk
 
-[submodule "language-cstml"]
-  path = repos/language-cstml
-  url = git@github.com:bablr-lang/language-cstml.git
+[submodule "language-en-cstml"]
+  path = repos/language-en-cstml
+  url = git@github.com:bablr-lang/language-en-cstml.git
   branch = trunk
 
-[submodule "language-json"]
-  path = repos/language-json
-  url = git@github.com:bablr-lang/language-json.git
+[submodule "language-en-json"]
+  path = repos/language-en-json
+  url = git@github.com:bablr-lang/language-en-json.git
   branch = trunk
 
-[submodule "language-regex-vm-pattern"]
-  path = repos/language-regex-vm-pattern
-  url = git@github.com:bablr-lang/language-regex-vm-pattern.git
+[submodule "language-en-regex-vm-pattern"]
+  path = repos/language-en-regex-vm-pattern
+  url = git@github.com:bablr-lang/language-en-regex-vm-pattern.git
   branch = trunk
 
-[submodule "language-spamex"]
-  path = repos/language-spamex
-  url = git@github.com:bablr-lang/language-spamex.git
+[submodule "language-en-spamex"]
+  path = repos/language-en-spamex
+  url = git@github.com:bablr-lang/language-en-spamex.git
   branch = trunk
 
 [submodule "language_enhancer-debug-log"]
@@ -118,6 +118,11 @@
   url = git@github.com:bablr-lang/macrome-generator-bablr.git
   branch = trunk
 
+[submodule "paneditor"]
+  path = repos/paneditor
+  url = git@github.com:bablr-lang/paneditor.git
+  branch = trunk
+
 [submodule "regex-vm"]
   path = repos/regex-vm
   url = git@github.com:bablr-lang/regex-vm.git
@@ -133,9 +138,9 @@
   url = git@github.com:bablr-lang/weak-stack.git
   branch = trunk
 
-[submodule "language-uiua"]
-  path = repos/language-uiua
-  url = git@github.com:bablr-lang/language-uiua.git
+[submodule "language-en-uiua"]
+  path = repos/language-en-uiua
+  url = git@github.com:bablr-lang/language-en-uiua.git
   branch = trunk
 
 [submodule "errawr"]

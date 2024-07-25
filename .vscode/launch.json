@@ -9,6 +9,7 @@
       "request": "launch",
       "name": "Play",
       "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
       "program": "${workspaceFolder}/play/index.js"
     },
     {
@@ -21,9 +22,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Test language-regex",
+      "name": "Test language-en-regex",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/repos/language-regex-vm-pattern/test/test.js"
+      "program": "${workspaceFolder}/repos/language-en-regex-vm-pattern/test/test.js"
     },
     {
       "type": "node",
@@ -41,9 +42,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Test language-cstml",
+      "name": "Test language-en-cstml",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/repos/language-cstml/test/test.js"
+      "program": "${workspaceFolder}/repos/language-en-cstml/test/test.js"
     },
     {
       "command": "pnpm exec babel play/fixture.js",

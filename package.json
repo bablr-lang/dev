@@ -12,14 +12,14 @@
     "@bablr/io-vm-node": "*",
     "@bablr/boot-helpers": "*",
     "@bablr/coroutine": "*",
-    "@bablr/language-bablr-cli-verbose-output": "*",
-    "@bablr/language-bablr-vm-instruction": "*",
-    "@bablr/language-blank-space": "*",
-    "@bablr/language-c-comments": "*",
-    "@bablr/language-cstml": "*",
-    "@bablr/language-json": "*",
-    "@bablr/language-regex-vm-pattern": "*",
-    "@bablr/language-spamex": "*",
+    "@bablr/language-en-bablr-cli-verbose-output": "*",
+    "@bablr/language-en-bablr-vm-instruction": "*",
+    "@bablr/language-en-blank-space": "*",
+    "@bablr/language-en-c-comments": "*",
+    "@bablr/language-en-cstml": "*",
+    "@bablr/language-en-json": "*",
+    "@bablr/language-en-regex-vm-pattern": "*",
+    "@bablr/language-en-spamex": "*",
     "@bablr/macrome": "*",
     "@bablr/macrome-generator-bablr": "*",
     "@bablr/language_enhancer-debug-log": "*",
@@ -28,7 +28,8 @@
     "@bablr/weak-stack": "*",
     "bablr": "*",
     "indent-string": "5.0.0",
-    "iter-tools-es": "7.5.3"
+    "iter-tools-es": "7.5.3",
+    "paneditor": "*"
   },
   "devDependencies": {
     "enhanced-resolve": "^5.12.0",
@@ -36,6 +37,7 @@
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",
     "eslint-plugin-import": "^2.27.5",
     "indent-string": "5.0.0",
+    "mocha": "10.6.0",
     "prettier": "^2.6.2"
   },
   "scripts": {
