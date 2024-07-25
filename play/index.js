@@ -21,7 +21,6 @@ import { generatePrettyCSTMLStrategy } from '@bablr/agast-helpers/stream';
 
 // import { sourceText, language, type, props } from './fixture.js';
 // import { createPrintCSTMLStrategy } from '@bablr/cli/syntax';
-import { evaluateIO } from '@bablr/io-vm-node';
 
 global.__printSource = printSource;
 
