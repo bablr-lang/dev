@@ -28,8 +28,7 @@
     "@bablr/weak-stack": "*",
     "bablr": "*",
     "indent-string": "5.0.0",
-    "iter-tools-es": "7.5.3",
-    "paneditor": "*"
+    "iter-tools-es": "7.5.3"
   },
   "devDependencies": {
     "enhanced-resolve": "^5.12.0",
