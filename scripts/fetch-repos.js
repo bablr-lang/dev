@@ -6,32 +6,48 @@ const projectPath = (path = '') => new URL(`../repos/${path}`, import.meta.url);
 
 const gitClient = buildGitClient({ baseDir: projectPath() });
 
-gitClient.fetch('git@github.com:bablr-lang/agast-helpers.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/agast-vm.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/agast-vm-helpers.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/io-vm-code.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/bablr.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/bablr-cli.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/bablr-helpers.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/bablr-vm.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/bablr-vm-strategy-parse.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/boot.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/boot-helpers.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/coroutine.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/eslint-config-base.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/language-bablr-cli-verbose-output.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/language-bablr-vm-instruction.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/language-blank-space.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/language-c-comments.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/language-cstml.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/language-json.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/language-regex-vm-pattern.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/language-spamex.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/language_enhancer-debug-log.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/macrome.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/macrome-generator-bablr.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/regex-vm.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/strategy_enhancer-debug-log.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/weak-stack.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/language-uiua.git', 'trunk');
-gitClient.fetch('git@github.com:bablr-lang/errawr.git', 'trunk');
+const repos = [
+  'git@github.com:bablr-lang/agast-helpers.git',
+  'git@github.com:bablr-lang/agast-vm.git',
+  'git@github.com:bablr-lang/agast-vm-helpers.git',
+  'git@github.com:bablr-lang/io-vm-node.git',
+  'git@github.com:bablr-lang/bablr.git',
+  'git@github.com:bablr-lang/bablr-cli.git',
+  'git@github.com:bablr-lang/bablr-helpers.git',
+  'git@github.com:bablr-lang/bablr-vm.git',
+  'git@github.com:bablr-lang/bablr-vm-strategy-parse.git',
+  'git@github.com:bablr-lang/boot.git',
+  'git@github.com:bablr-lang/boot-helpers.git',
+  'git@github.com:bablr-lang/coroutine.git',
+  'git@github.com:bablr-lang/eslint-config-base.git',
+  'git@github.com:bablr-lang/language-en-bablr-cli-verbose-output.git',
+  'git@github.com:bablr-lang/language-en-bablr-vm-instruction.git',
+  'git@github.com:bablr-lang/language-en-blank-space.git',
+  'git@github.com:bablr-lang/language-en-c-comments.git',
+  'git@github.com:bablr-lang/language-en-cstml.git',
+  'git@github.com:bablr-lang/language-en-json.git',
+  'git@github.com:bablr-lang/language-en-regex-vm-pattern.git',
+  'git@github.com:bablr-lang/language-en-spamex.git',
+  'git@github.com:bablr-lang/language_enhancer-debug-log.git',
+  'git@github.com:bablr-lang/macrome.git',
+  'git@github.com:bablr-lang/macrome-generator-bablr.git',
+  'git@github.com:bablr-lang/paneditor.git',
+  'git@github.com:bablr-lang/regex-vm.git',
+  'git@github.com:bablr-lang/strategy_enhancer-debug-log.git',
+  'git@github.com:bablr-lang/weak-stack.git',
+  'git@github.com:bablr-lang/language-uiua.git',
+  'git@github.com:bablr-lang/errawr.git',
+];
+
+let count = 0;
+repos.forEach((repo) => {
+  try {
+    gitClient.fetch(repo, 'trunk');
+    console.log(`fetching ${repo.split(':')[1]}`);
+    count++;
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
+console.log(`Successfully fetched ${count} repos`);
