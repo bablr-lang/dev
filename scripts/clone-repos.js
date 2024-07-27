@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import { simpleGit as buildGitClient } from 'simple-git';
 
 const projectPath = (path = '') => new URL(`../repos/${path}`, import.meta.url);
