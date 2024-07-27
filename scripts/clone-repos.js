@@ -41,7 +41,7 @@ const repos = [
 let count = 0;
 repos.forEach((repo) => {
   try {
-    gitClient.fetch(repo, 'trunk');
+    gitClient.clone(repo);
     console.log(`cloning ${repo.split(':')[1]} into ${projectPath()}`);
     count++;
   } catch (error) {
