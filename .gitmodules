@@ -147,6 +147,8 @@
   path = repos/errawr
   url = git@github.com:bablr-lang/errawr.git
   branch = trunk
-[submodule "repos/langauge-en-es3"]
-	path = repos/langauge-en-es3
+
+[submodule "repos/language-en-es3"]
+	path = repos/language-en-es3
 	url = git@github.com:bablr-lang/language-en-es3.git
+	branch = trunk
