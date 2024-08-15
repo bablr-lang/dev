@@ -1,0 +1,149 @@
+[submodule "agast-helpers"]
+  path = repos/agast-helpers
+  url = git@github.com:bablr-lang/agast-helpers.git
+  branch = trunk
+
+[submodule "agast-vm"]
+  path = repos/agast-vm
+  url = git@github.com:bablr-lang/agast-vm.git
+  branch = trunk
+
+[submodule "agast-vm-helpers"]
+  path = repos/agast-vm-helpers
+  url = git@github.com:bablr-lang/agast-vm-helpers.git
+  branch = trunk
+
+[submodule "io-vm-node"]
+  path = repos/io-vm-node
+  url = git@github.com:bablr-lang/io-vm-node.git
+  branch = trunk
+
+[submodule "bablr"]
+  path = repos/bablr
+  url = git@github.com:bablr-lang/bablr.git
+  branch = trunk
+
+[submodule "bablr-cli"]
+  path = repos/bablr-cli
+  url = git@github.com:bablr-lang/bablr-cli.git
+  branch = trunk
+
+[submodule "bablr-helpers"]
+  path = repos/bablr-helpers
+  url = git@github.com:bablr-lang/bablr-helpers.git
+  branch = trunk
+
+[submodule "bablr-vm"]
+  path = repos/bablr-vm
+  url = git@github.com:bablr-lang/bablr-vm.git
+  branch = trunk
+
+[submodule "bablr-vm-strategy-parse"]
+  path = repos/bablr-vm-strategy-parse
+  url = git@github.com:bablr-lang/bablr-vm-strategy-parse.git
+  branch = trunk
+
+[submodule "boot"]
+  path = repos/boot
+  url = git@github.com:bablr-lang/boot.git
+  branch = trunk
+
+[submodule "boot-helpers"]
+  path = repos/boot-helpers
+  url = git@github.com:bablr-lang/boot-helpers.git
+  branch = trunk
+
+[submodule "coroutine"]
+  path = repos/coroutine
+  url = git@github.com:bablr-lang/coroutine.git
+  branch = trunk
+
+[submodule "eslint-config-base"]
+  path = repos/eslint-config-base
+  url = git@github.com:bablr-lang/eslint-config-base.git
+  branch = trunk
+
+[submodule "language-en-bablr-cli-verbose-output"]
+  path = repos/language-en-bablr-cli-verbose-output
+  url = git@github.com:bablr-lang/language-en-bablr-cli-verbose-output.git
+  branch = trunk
+
+[submodule "language-en-bablr-vm-instruction"]
+  path = repos/language-en-bablr-vm-instruction
+  url = git@github.com:bablr-lang/language-en-bablr-vm-instruction.git
+  branch = trunk
+
+[submodule "language-en-blank-space"]
+  path = repos/language-en-blank-space
+  url = git@github.com:bablr-lang/language-en-blank-space.git
+  branch = trunk
+
+[submodule "language-en-c-comments"]
+  path = repos/language-en-c-comments
+  url = git@github.com:bablr-lang/language-en-c-comments.git
+  branch = trunk
+
+[submodule "language-en-cstml"]
+  path = repos/language-en-cstml
+  url = git@github.com:bablr-lang/language-en-cstml.git
+  branch = trunk
+
+[submodule "language-en-json"]
+  path = repos/language-en-json
+  url = git@github.com:bablr-lang/language-en-json.git
+  branch = trunk
+
+[submodule "language-en-regex-vm-pattern"]
+  path = repos/language-en-regex-vm-pattern
+  url = git@github.com:bablr-lang/language-en-regex-vm-pattern.git
+  branch = trunk
+
+[submodule "language-en-spamex"]
+  path = repos/language-en-spamex
+  url = git@github.com:bablr-lang/language-en-spamex.git
+  branch = trunk
+
+[submodule "language_enhancer-debug-log"]
+  path = repos/language_enhancer-debug-log
+  url = git@github.com:bablr-lang/language_enhancer-debug-log.git
+  branch = trunk
+
+[submodule "macrome"]
+  path = repos/macrome
+  url = git@github.com:bablr-lang/macrome.git
+  branch = trunk
+
+[submodule "macrome-generator-bablr"]
+  path = repos/macrome-generator-bablr
+  url = git@github.com:bablr-lang/macrome-generator-bablr.git
+  branch = trunk
+
+[submodule "paneditor"]
+  path = repos/paneditor
+  url = git@github.com:bablr-lang/paneditor.git
+  branch = trunk
+
+[submodule "regex-vm"]
+  path = repos/regex-vm
+  url = git@github.com:bablr-lang/regex-vm.git
+  branch = trunk
+
+[submodule "strategy_enhancer-debug-log"]
+  path = repos/strategy_enhancer-debug-log
+  url = git@github.com:bablr-lang/strategy_enhancer-debug-log.git
+  branch = trunk
+
+[submodule "weak-stack"]
+  path = repos/weak-stack
+  url = git@github.com:bablr-lang/weak-stack.git
+  branch = trunk
+
+[submodule "language-en-uiua"]
+  path = repos/language-en-uiua
+  url = git@github.com:bablr-lang/language-en-uiua.git
+  branch = trunk
+
+[submodule "errawr"]
+  path = repos/errawr
+  url = git@github.com:bablr-lang/errawr.git
+  branch = trunk
