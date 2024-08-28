@@ -138,11 +138,6 @@
   url = git@github.com:bablr-lang/weak-stack.git
   branch = trunk
 
-[submodule "language-en-uiua"]
-  path = repos/language-en-uiua
-  url = git@github.com:bablr-lang/language-en-uiua.git
-  branch = trunk
-
 [submodule "errawr"]
   path = repos/errawr
   url = git@github.com:bablr-lang/errawr.git
