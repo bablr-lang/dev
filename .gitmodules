@@ -147,3 +147,8 @@
 	path = repos/language-en-es3
 	url = git@github.com:bablr-lang/language-en-es3.git
 	branch = trunk
+
+[submodule "pattern-engine"]
+	path = repos/pattern-engine
+	url = git@github.com:bablr-lang/pattern-engine.git
+  branch = trunk
