@@ -41,6 +41,7 @@
     "simple-git": "^3.25.0"
   },
   "scripts": {
+    "test": "mocha repos/*/test/*.test.js",
     "postinstall": "./scripts/link-packages.js",
     "link-packages": "./scripts/link-packages.js",
     "use-https-submodules": "./scripts/clone-https-submodules.js",
