@@ -143,12 +143,12 @@
   url = git@github.com:bablr-lang/errawr.git
   branch = trunk
 
-[submodule "repos/language-en-es3"]
+[submodule "language-en-es3"]
 	path = repos/language-en-es3
 	url = git@github.com:bablr-lang/language-en-es3.git
 	branch = trunk
 
-[submodule "repos/pattern-engine"]
+[submodule "pattern-engine"]
 	path = repos/pattern-engine
 	url = git@github.com:bablr-lang/pattern-engine.git
   branch = trunk
