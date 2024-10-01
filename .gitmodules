@@ -152,3 +152,7 @@
 	path = repos/pattern-engine
 	url = git@github.com:bablr-lang/pattern-engine.git
 	branch = trunk
+[submodule "btree"]
+	path = repos/btree
+	url = git@github.com:bablr-lang/btree.git
+	branch = trunk
