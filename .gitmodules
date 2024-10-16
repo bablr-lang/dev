@@ -157,3 +157,7 @@
 	path = repos/btree
 	url = git@github.com:bablr-lang/btree.git
 	branch = trunk
+[submodule "deno-cli"]
+	path = repos/deno-cli
+	url = git@github.com:bablr-lang/deno-cli.git
+	branch = trunk
