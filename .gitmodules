@@ -157,7 +157,18 @@
 	path = repos/btree
 	url = git@github.com:bablr-lang/btree.git
 	branch = trunk
+  
 [submodule "deno-cli"]
 	path = repos/deno-cli
 	url = git@github.com:bablr-lang/deno-cli.git
 	branch = trunk
+
+[submodule "agast-vm-strategy-passthrough"]
+  path = repos/agast-vm-strategy-passthrough
+  url = git@github.com:bablr-lang/agast-vm-strategy-passthrough.git
+  branch = trunk
+
+[submodule "spamex-vm"]
+  path = repos/spamex-vm
+  url =  git@github.com:bablr-lang/spamex-vm.git
+  branch = trunk
