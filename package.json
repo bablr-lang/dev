@@ -19,6 +19,7 @@
     "@bablr/language-en-blank-space": "*",
     "@bablr/language-en-c-comments": "*",
     "@bablr/language-en-cstml": "*",
+    "@bablr/language-en-es3": "*",
     "@bablr/language-en-json": "*",
     "@bablr/language-en-regex-vm-pattern": "*",
     "@bablr/language-en-spamex": "*",
@@ -34,6 +35,7 @@
     "iter-tools-es": "7.5.3"
   },
   "devDependencies": {
+    "@babel/runtime": "7.25.0",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.32.0",
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",

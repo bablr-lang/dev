@@ -15,6 +15,22 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Play with macrome",
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
+      "program": "${workspaceFolder}/build.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Play with btree",
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
+      "program": "${workspaceFolder}/repos/btree/play.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Test agAST-vm",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/repos/agast-vm/test/runner.js"
