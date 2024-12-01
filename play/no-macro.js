@@ -1,13 +1,9 @@
-import { i, re } from '@bablr/boot';
+import { i, re, spam, cst, str } from '@bablr/boot';
 import { buildNumber } from '@bablr/agast-vm-helpers';
-
-import * as Space from '@bablr/language-en-blank-space';
-
-export const dependencies = { Space };
 
 export function* eatMatchTrivia() {
   if (yield i`match(/[ \t\r\n]/)`) {
-    return yield i`eat(<#*Space:Space>)`;
+    return yield i`eat(#: <*Space>)`;
   }
   return null;
 }
@@ -17,7 +13,7 @@ export const grammar = class Markdown {
     this.covers = new Map();
     this.covers.set(
       Symbol.for('@bablr/node'),
-      new Set(['Punctuator', 'Root', 'Paragraph', 'Heading', 'HeadingLevel', 'Literal']),
+      new Set(['Punctuator', 'Root', 'Paragraph', 'Heading', 'HeadingLevel', 'Literal', 'Space']),
     );
     this.attributes = this.attributes || new Map();
     this.attributes.set('HeadingLevel', ['depth']);
@@ -64,6 +60,10 @@ export const grammar = class Markdown {
     for (const matcher of ctx.unbox(matchers)) {
       if (yield i`eatMatch(${matcher})`) break;
     }
+  }
+
+  *Space() {
+    yield i`eat(/[ \t\r\n]+/)`;
   }
 };
 

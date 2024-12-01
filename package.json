@@ -9,7 +9,6 @@
     "@bablr/boot": "*",
     "@bablr/btree": "*",
     "@bablr/cli": "*",
-    "@bablr/deno-cli": "*",
     "@bablr/helpers": "*",
     "@bablr/io-vm-node": "*",
     "@bablr/boot-helpers": "*",

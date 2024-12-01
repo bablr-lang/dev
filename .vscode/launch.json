@@ -31,6 +31,14 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Play with boot",
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
+      "program": "${workspaceFolder}/repos/boot/play/index.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Test agAST-vm",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/repos/agast-vm/test/runner.js"
