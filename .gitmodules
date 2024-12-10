@@ -18,6 +18,11 @@
   url = git@github.com:bablr-lang/io-vm-node.git
   branch = trunk
 
+[submodule "io-vm-web"]
+  path = repos/io-vm-web
+  url = git@github.com:bablr-lang/io-vm-web.git
+  branch = trunk
+
 [submodule "bablr"]
   path = repos/bablr
   url = git@github.com:bablr-lang/bablr.git
@@ -31,6 +36,11 @@
 [submodule "bablr-helpers"]
   path = repos/bablr-helpers
   url = git@github.com:bablr-lang/bablr-helpers.git
+  branch = trunk
+
+[submodule "bablr-website"]
+  path = repos/bablr-website
+  url = git@github.com:bablr-lang/bablr-website.git
   branch = trunk
 
 [submodule "bablr-vm"]
