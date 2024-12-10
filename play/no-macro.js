@@ -1,5 +1,5 @@
 import { i, re } from '@bablr/boot';
-import { buildNumber } from '@bablr/agast-vm-helpers';
+import { buildNumber } from '@bablr/helpers/builders';
 
 import * as Space from '@bablr/language-en-blank-space';
 

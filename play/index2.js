@@ -6,7 +6,7 @@ import { evaluateIO } from '@bablr/io-vm-node';
 import * as language from '@bablr/language-en-c-comments';
 import { generatePrettyCSTMLStrategy } from '@bablr/helpers/stream';
 
-import { buildFullyQualifiedSpamMatcher } from '@bablr/agast-vm-helpers';
+import { buildFullyQualifiedSpamMatcher } from '@bablr/helpers/builders;
 
 let enhancers = {};
 
