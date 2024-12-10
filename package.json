@@ -31,9 +31,12 @@
     "@bablr/regex-vm": "*",
     "@bablr/strategy_enhancer-debug-log": "*",
     "@bablr/weak-stack": "*",
+    "@rollup/plugin-commonjs": "28.0.1",
+    "@rollup/plugin-node-resolve": "15.3.0",
     "bablr": "*",
     "indent-string": "5.0.0",
-    "iter-tools-es": "7.5.3"
+    "iter-tools-es": "7.5.3",
+    "rollup": "4.28.1"
   },
   "devDependencies": {
     "@babel/runtime": "7.25.0",

@@ -1,15 +1,22 @@
 import { rollup } from 'rollup';
 import commonjs from '@rollup/plugin-commonjs';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 const inputOptions = {
   input: 'repos/boot/lib/index.js',
-  plugins: [commonjs()],
+  plugins: [commonjs(), nodeResolve({ exportConditions: ['node'] })],
 };
 
-const outputOptions = {
-  file: './boot.bundle.js',
+const esmOutputOptions = {
+  file: 'repos/boot/dist/esm.bundle.mjs',
   format: 'esm',
 };
 
+const cjsOutputOptions = {
+  file: 'repos/boot/dist/cjs.bundle.cjs',
+  format: 'cjs',
+};
+
 let bundle = await rollup(inputOptions);
-await bundle.generate(outputOptions);
+await bundle.write(esmOutputOptions);
+await bundle.write(cjsOutputOptions);
