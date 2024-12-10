@@ -38,6 +38,11 @@
   url = git@github.com:bablr-lang/bablr-vm.git
   branch = trunk
 
+[submodule "bablr-website"]
+  path = repos/bablr-website
+  url = git@github.com:bablr-lang/bablr-website.git
+  branch = trunk
+
 [submodule "bablr-vm-strategy-parse"]
   path = repos/bablr-vm-strategy-parse
   url = git@github.com:bablr-lang/bablr-vm-strategy-parse.git
@@ -152,12 +157,12 @@
 	path = repos/pattern-engine
 	url = git@github.com:bablr-lang/pattern-engine.git
 	branch = trunk
-  
+
 [submodule "btree"]
 	path = repos/btree
 	url = git@github.com:bablr-lang/btree.git
 	branch = trunk
-  
+
 [submodule "deno-cli"]
 	path = repos/deno-cli
 	url = git@github.com:bablr-lang/deno-cli.git
