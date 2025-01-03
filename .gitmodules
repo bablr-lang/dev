@@ -182,3 +182,7 @@
   path = repos/spamex-vm
   url =  git@github.com:bablr-lang/spamex-vm.git
   branch = trunk
+[submodule "language-en-scheme"]
+	path = repos/language-en-scheme
+	url = git@github.com:bablr-lang/language-en-scheme.git
+	branch = trunk
