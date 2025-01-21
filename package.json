@@ -4,6 +4,7 @@
     "@bablr/agast-helpers": "*",
     "@bablr/agast-vm": "*",
     "@bablr/agast-vm-helpers": "*",
+    "@bablr/agast-vm-strategy-passthrough": "*",
     "@bablr/bablr-vm": "*",
     "@bablr/bablr-vm-strategy-parse": "*",
     "@bablr/boot": "*",
