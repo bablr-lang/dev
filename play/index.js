@@ -1,26 +1,43 @@
 /* global global, console, URL, globalThis, process */
 
-import { streamParse, buildTag, Context, AgastContext } from 'bablr/enhanceable';
+import { spam, str, spam as m, i } from '@bablr/boot';
+import { streamParse, buildTag, Context } from 'bablr/enhanceable';
 import { debugEnhancers } from '@bablr/helpers/enhancers';
 import { evaluateIO } from '@bablr/io-vm-node';
-// import * as language from '@bablr/language-en-cstml';
-import * as language from '@bablr/language-en-json';
-import { generatePrettyCSTMLStrategy } from '@bablr/helpers/stream';
+// import * as language from '@bablr/language-en-regex-vm-pattern';
+import * as language from '@bablr/language-en-cstml';
+// import * as language from '@bablr/language-en-scheme';
+import { printPrettyCSTML as printPrettyCSTMLStream } from '@bablr/helpers/stream';
 import { printPrettyCSTML } from '@bablr/helpers/tree';
+import { generateCSTML } from '@bablr/cli/syntax';
 
-import { buildFullyQualifiedSpamMatcher } from '@bablr/agast-vm-helpers';
+import { evaluateReturnSync, printTag, streamFromTree } from '@bablr/agast-helpers/tree';
+import { embeddedSourceFrom } from '@bablr/helpers/source';
+import { buildIdentifier, buildString } from '@bablr/helpers/builders';
+import { writeCSTMLStrategy, writePrettyCSTMLStrategy } from '@bablr/agast-helpers/stream';
 
 let enhancers = {};
 
+global.printTag = printTag;
+
 enhancers = { ...debugEnhancers, enhancers };
 
-const input = `"'"`;
+const input = String.raw`<!0:cstml>`;
+// const input = embeddedSourceFrom(`'[ '<//>' ]'`);
 
-const matcher = buildFullyQualifiedSpamMatcher({}, language.canonicalURL, 'String');
-const ctx = Context.from(AgastContext.create(), language, enhancers.bablrProduction);
+const matcher = spam`<$${buildString(language.canonicalURL)}:DoctypeTag />`;
+const ctx = Context.from(language, enhancers.bablrProduction);
 
-const tokens = streamParse(ctx, matcher, input, {}, { enhancers, emitEffects: true });
+const tags = evaluateIO(() =>
+  streamParse(ctx, matcher, input, {}, { enhancers, emitEffects: true }),
+);
 
 console.log();
 
-evaluateIO(() => generatePrettyCSTMLStrategy(tokens, { ctx, emitEffects: true }));
+//evaluateReturnSync(tags);
+
+console.log(printPrettyCSTMLStream(tags, { ctx }));
+// const tag = buildTag(ctx, matcher, undefined, enhancers);
+
+// const flags = tag.Flags`i`;
+// console.log(printPrettyCSTML(tag`${flags}`, { ctx }));
