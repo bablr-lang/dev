@@ -14,7 +14,6 @@
     "@bablr/helpers": "*",
     "@bablr/io-vm-node": "*",
     "@bablr/io-vm-web": "*",
-    "@bablr/boot-helpers": "*",
     "@bablr/coroutine": "*",
     "@bablr/language-en-bablr-cli-verbose-output": "*",
     "@bablr/language-en-bablr-vm-instruction": "*",
