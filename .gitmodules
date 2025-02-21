@@ -98,6 +98,11 @@
   url = git@github.com:bablr-lang/language-en-cstml-json.git
   branch = trunk
 
+[submodule "language-en-json"]
+  path = repos/language-en-json
+  url = git@github.com:bablr-lang/language-en-json.git
+  branch = trunk
+
 [submodule "language-en-regex-vm-pattern"]
   path = repos/language-en-regex-vm-pattern
   url = git@github.com:bablr-lang/language-en-regex-vm-pattern.git
