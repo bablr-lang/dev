@@ -5,9 +5,11 @@ import { streamParse, buildTag, Context } from 'bablr/enhanceable';
 import { debugEnhancers } from '@bablr/helpers/enhancers';
 import { evaluateIO } from '@bablr/io-vm-node';
 // import * as language from '@bablr/language-en-regex-vm-pattern';
-import * as language from '@bablr/language-en-json';
+// import * as language from '@bablr/language-en-json';
 // import * as language from '@bablr/language-en-scheme';
-import { printPrettyCSTML as printPrettyCSTMLStream } from '@bablr/helpers/stream';
+import * as language from '@bablr/language-en-ruby';
+
+import { printPrettyCSTML as printPrettyCSTMLStream } from '@bablr/agast-helpers/stream';
 import { printPrettyCSTML } from '@bablr/helpers/tree';
 import { generateCSTML } from '@bablr/cli/syntax';
 
@@ -25,7 +27,7 @@ enhancers = { ...debugEnhancers, enhancers };
 const input = String.raw`"hello"`;
 // const input = embeddedSourceFrom(`'[ '<//>' ]'`);
 
-const matcher = spam`<$${buildString(language.canonicalURL)}:${buildIdentifier('String')} />`;
+const matcher = spam`<$${buildString(language.canonicalURL)}:Program />`;
 const ctx = Context.from(language, enhancers.bablrProduction);
 
 const tags = evaluateIO(() =>
