@@ -113,6 +113,11 @@
   url = git@github.com:bablr-lang/language-en-spamex.git
   branch = trunk
 
+[submodule "language-en-ruby"]
+  path = repos/language-en-ruby
+  url = git@github.com:bablr-lang/language-en-ruby.git
+  branch = trunk
+
 [submodule "language_enhancer-debug-log"]
   path = repos/language_enhancer-debug-log
   url = git@github.com:bablr-lang/language_enhancer-debug-log.git
@@ -182,6 +187,7 @@
   path = repos/spamex-vm
   url =  git@github.com:bablr-lang/spamex-vm.git
   branch = trunk
+
 [submodule "language-en-scheme"]
 	path = repos/language-en-scheme
 	url = git@github.com:bablr-lang/language-en-scheme.git

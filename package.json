@@ -22,6 +22,7 @@
     "@bablr/language-en-cstml": "*",
     "@bablr/language-en-es3": "*",
     "@bablr/language-en-cstml-json": "*",
+    "@bablr/language-en-json": "*",
     "@bablr/language-en-scheme": "*",
     "@bablr/language-en-regex-vm-pattern": "*",
     "@bablr/language-en-spamex": "*",
