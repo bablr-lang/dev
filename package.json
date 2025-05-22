@@ -24,6 +24,7 @@
     "@bablr/language-en-cstml-json": "*",
     "@bablr/language-en-json": "*",
     "@bablr/language-en-scheme": "*",
+    "@bablr/language-en-ruby": "*",
     "@bablr/language-en-regex-vm-pattern": "*",
     "@bablr/language-en-spamex": "*",
     "@bablr/macrome": "*",
