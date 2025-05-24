@@ -42,6 +42,7 @@
       "name": "Play with spamex-vm",
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal",
+      "trace": true,
       "program": "${workspaceFolder}/repos/spamex-vm/play.js"
     },
     {

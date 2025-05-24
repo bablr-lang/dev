@@ -32,6 +32,7 @@
     "@bablr/language_enhancer-debug-log": "*",
     "@bablr/pattern-engine": "*",
     "@bablr/regex-vm": "*",
+    "@bablr/spamex-vm": "*",
     "@bablr/strategy_enhancer-debug-log": "*",
     "@bablr/weak-stack": "*",
     "bablr": "*",
