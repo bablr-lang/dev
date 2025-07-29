@@ -1,9 +1,9 @@
-import { spam } from '@bablr/boot';
-
-export * as language from '@bablr/language-cstml';
-
-export const sourceText = '<> </>';
-
-export const matcher = spam`<Tree>`;
-
-export const props = {};
+export var createParseStrategy = function createParseStrategy(
+  rootLanguage,
+  rootMatcher,
+  rootProps
+) {
+  return function (ctx) {
+    return new StreamGenerator(parseStrategy(ctx, rootLanguage, rootMatcher, rootProps));
+  };
+};

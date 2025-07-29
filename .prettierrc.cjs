@@ -10,5 +10,11 @@ module.exports = {
         printWidth: 60,
       },
     },
+    {
+      files: 'fixture.js',
+      options: {
+        trailingComma: 'none',
+      },
+    },
   ],
 };

@@ -4,11 +4,12 @@ import { spam, str, i } from '@bablr/boot';
 import { streamParse, buildTag } from 'bablr/enhanceable';
 import { debugEnhancers } from '@bablr/helpers/enhancers';
 import { evaluateIO } from '@bablr/io-vm-node';
+import * as fs from 'node:fs';
 // import * as language from '@bablr/language-en-regex-vm-pattern';
-// import * as language from '@bablr/language-en-json';
-// import * as language from '@bablr/language-en-scheme';
+// import * as language from '@bablr/language-en-cstml';
+// import * as language from '@bablr/language-en-c-comments';
 // import * as language from '@bablr/language-en-ruby';
-import * as language from 'language-en-es6';
+import * as language from '@bablr/language-en-es3';
 
 import { printPrettyCSTML as printPrettyCSTMLStream } from '@bablr/agast-helpers/stream';
 import { printPrettyCSTML } from '@bablr/helpers/tree';
@@ -19,13 +20,14 @@ import { embeddedSourceFrom } from '@bablr/helpers/source';
 import { buildIdentifier, buildString } from '@bablr/helpers/builders';
 // import { writeCSTMLStrategy, writePrettyCSTMLStrategy } from '@bablr/agast-helpers/stream';
 
+let input = fs.readFileSync('./play/fixture.js', 'utf-8');
 let enhancers = {};
 
 global.printTag = printTag;
 
-enhancers = { ...debugEnhancers, enhancers };
+// enhancers = { ...debugEnhancers, enhancers };
 
-const input = String.raw`"hello"`;
+// const input = String.raw`/^$\b/`;
 // const input = embeddedSourceFrom(`'[ '<//>' ]'`);
 
 const matcher = spam`<$Program />`;
