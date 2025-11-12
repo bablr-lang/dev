@@ -193,7 +193,31 @@
   url =  git@github.com:bablr-lang/spamex-vm.git
   branch = trunk
 
+[submodule "stream-iterator"]
+  path = repos/stream-iterator
+  url =  git@github.com:bablr-lang/stream-iterator.git
+  branch = trunk
+
+[submodule "astro_integration-cstml"]
+  path = repos/astro_integration-cstml
+  url =  git@github.com:bablr-lang/astro_integration-cstml.git
+  branch = trunk
+
+[submodule "vite_plugin-cstml-to-jsx"]
+  path = repos/vite_plugin-cstml-to-jsx
+  url =  git@github.com:bablr-lang/vite_plugin-cstml-to-jsx.git
+  branch = trunk
+
 [submodule "language-en-scheme"]
 	path = repos/language-en-scheme
 	url = git@github.com:bablr-lang/language-en-scheme.git
 	branch = trunk
+
+[submodule "language-en-esnext"]
+	path = repos/language-en-esnext
+	url = git@github.com:bablr-lang/language-en-esnext
+  branch = trunk
+[submodule "language-en-es6"]
+	path = repos/language-en-es6
+	url = git@github.com:bablr-lang/language-en-es6
+  branch = trunk
