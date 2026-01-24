@@ -1,10 +1,11 @@
 {
   "type": "module",
   "dependencies": {
+    "astro": "5.7.3",
+    "@astrojs/starlight": "*",
     "@bablr/agast-helpers": "*",
     "@bablr/agast-vm": "*",
     "@bablr/agast-vm-helpers": "*",
-    "@bablr/agast-vm-strategy-passthrough": "*",
     "@bablr/astro_integration-cstml": "*",
     "@bablr/bablr-vm": "*",
     "@bablr/bablr-vm-strategy-parse": "*",
@@ -27,8 +28,6 @@
     "@bablr/language-en-esnext": "*",
     "@bablr/language-en-cstml-json": "*",
     "@bablr/language-en-json": "*",
-    "@bablr/language-en-scheme": "*",
-    "@bablr/language-en-ruby": "*",
     "@bablr/language-en-regex-vm-pattern": "*",
     "@bablr/language-en-spamex": "*",
     "@bablr/macrome": "*",
@@ -39,7 +38,6 @@
     "@bablr/spamex-vm": "*",
     "@bablr/strategy_enhancer-debug-log": "*",
     "@bablr/vite_plugin-cstml-to-jsx": "*",
-    "@bablr/weak-stack": "*",
     "@bablr/stream-iterator": "*",
     "bablr": "*",
     "indent-string": "5.0.0",
@@ -48,6 +46,7 @@
   "devDependencies": {
     "@babel/runtime": "7.28.2",
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#c97bfa4b3663f8378e9b3e42bb5a41e685406cf9",
+    "@babel/eslint-parser": "7.28.6",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.32.0",
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",

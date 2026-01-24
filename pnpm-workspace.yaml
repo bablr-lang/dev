@@ -1,3 +1,4 @@
 packages:
   - 'repos/*'
+  - 'repos/starlight/packages/*'
   - 'play'
