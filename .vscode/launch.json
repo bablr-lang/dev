@@ -15,6 +15,14 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Play with hoisting",
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
+      "program": "${workspaceFolder}/play/hoist.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Play with macrome",
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal",
@@ -31,10 +39,26 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Play with agAST helpers",
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
+      "program": "${workspaceFolder}/repos/agast-helpers/play.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Play with boot",
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal",
       "program": "${workspaceFolder}/repos/boot/play/index.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Play with vite plugin",
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
+      "program": "${workspaceFolder}/repos/vite_plugin-cstml-to-jsx/play.js"
     },
     {
       "type": "node",

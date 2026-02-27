@@ -29,6 +29,10 @@ for (const repo of await readdir(local`repos`)) {
       } catch (e) {}
 
       try {
+        await unlink(local`repos/${repo}/node_modules/bedazzlr`);
+      } catch (e) {}
+
+      try {
         await unlink(local`repos/${repo}/node_modules/.bin/bablr`);
       } catch (e) {}
 

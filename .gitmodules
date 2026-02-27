@@ -123,21 +123,6 @@
   url = git@github.com:bablr-lang/language_enhancer-debug-log.git
   branch = trunk
 
-[submodule "macrome"]
-  path = repos/macrome
-  url = git@github.com:bablr-lang/macrome.git
-  branch = trunk
-
-[submodule "macrome-generator-bablr"]
-  path = repos/macrome-generator-bablr
-  url = git@github.com:bablr-lang/macrome-generator-bablr.git
-  branch = trunk
-
-[submodule "paneditor"]
-  path = repos/paneditor
-  url = git@github.com:bablr-lang/paneditor.git
-  branch = trunk
-
 [submodule "regex-vm"]
   path = repos/regex-vm
   url = git@github.com:bablr-lang/regex-vm.git
@@ -146,11 +131,6 @@
 [submodule "strategy_enhancer-debug-log"]
   path = repos/strategy_enhancer-debug-log
   url = git@github.com:bablr-lang/strategy_enhancer-debug-log.git
-  branch = trunk
-
-[submodule "weak-stack"]
-  path = repos/weak-stack
-  url = git@github.com:bablr-lang/weak-stack.git
   branch = trunk
 
 [submodule "errawr"]
@@ -163,7 +143,7 @@
 	url = git@github.com:bablr-lang/language-en-es3.git
 	branch = trunk
 
-  [submodule "language-en-es5"]
+[submodule "language-en-es5"]
 	path = repos/language-en-es5
 	url = git@github.com:bablr-lang/language-en-es5.git
 	branch = trunk

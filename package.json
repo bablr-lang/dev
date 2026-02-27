@@ -2,7 +2,7 @@
   "type": "module",
   "dependencies": {
     "astro": "5.7.3",
-    "@astrojs/starlight": "*",
+    "@bablr/starlight": "0.36.2",
     "@bablr/agast-helpers": "*",
     "@bablr/agast-vm": "*",
     "@bablr/agast-vm-helpers": "*",
@@ -30,8 +30,7 @@
     "@bablr/language-en-json": "*",
     "@bablr/language-en-regex-vm-pattern": "*",
     "@bablr/language-en-spamex": "*",
-    "@bablr/macrome": "*",
-    "@bablr/macrome-generator-bablr": "*",
+    "@bablr/language-en-unison": "*",
     "@bablr/language_enhancer-debug-log": "*",
     "@bablr/pattern-engine": "*",
     "@bablr/regex-vm": "*",
@@ -40,6 +39,7 @@
     "@bablr/vite_plugin-cstml-to-jsx": "*",
     "@bablr/stream-iterator": "*",
     "bablr": "*",
+    "bedazzlr": "*",
     "indent-string": "5.0.0",
     "iter-tools-es": "7.5.3"
   },
