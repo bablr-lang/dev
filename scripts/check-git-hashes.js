@@ -2,9 +2,9 @@
 
 /* global console */
 
-import concat from 'iter-tools-es/methods/concat';
 import { readFile, readdir } from 'fs/promises';
 import { local } from './utils/path.js';
+import { concat } from '@bablr/agast-helpers/iterable';
 
 const repos = {};
 

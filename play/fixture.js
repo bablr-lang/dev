@@ -1,1 +1,1 @@
-{ baz: undefined }
+advance(Path.fromTag().node);

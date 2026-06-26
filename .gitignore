@@ -2,3 +2,4 @@ node_modules
 yarn.lock
 pnpm-lock.yaml
 package-lock.json
+isolate-0x*.log
