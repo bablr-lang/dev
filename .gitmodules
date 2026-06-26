@@ -163,9 +163,9 @@
   url = git@github.com:bablr-lang/language-en-spamex.git
   branch = trunk
 
-[submodule "language-en-ruby"]
-  path = repos/language-en-ruby
-  url = git@github.com:bablr-lang/language-en-ruby.git
+[submodule "language-en-python"]
+  path = repos/language-en-python
+  url = git@github.com:bablr-lang/language-en-python.git
   branch = trunk
 
 [submodule "regex-vm"]
