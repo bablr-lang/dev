@@ -23,6 +23,23 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Play with fs",
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
+      "program": "${workspaceFolder}/play/fs.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Play with blab",
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
+      "program": "play.js",
+      "cwd": "${workspaceFolder}/repos/blab"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Play with scratch?",
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal",

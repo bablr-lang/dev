@@ -13,6 +13,11 @@
   url = git@github.com:bablr-lang/agast-vm-helpers.git
   branch = trunk
 
+[submodule "node-io-vm"]
+  path = repos/node-io-vm
+  url = git@github.com:bablr-lang/node-io-vm.git
+  branch = trunk
+
 [submodule "io-vm-node"]
   path = repos/io-vm-node
   url = git@github.com:bablr-lang/io-vm-node.git
@@ -38,9 +43,14 @@
   url = git@github.com:bablr-lang/bablr-docs.git
   branch = trunk
 
-[submodule "bablr-fs-node"]
-  path = repos/bablr-fs-node
-  url = git@github.com:bablr-lang/bablr-fs-node.git
+[submodule "node-fs"]
+  path = repos/node-fs
+  url = git@github.com:bablr-lang/node-fs.git
+  branch = trunk
+
+[submodule "node-fs-cstml"]
+  path = repos/node-fs-cstml
+  url = git@github.com:bablr-lang/node-fs-cstml.git
   branch = trunk
 
 [submodule "babterm"]
@@ -153,6 +163,11 @@
   url = git@github.com:bablr-lang/language-en-json.git
   branch = trunk
 
+[submodule "language-en-python"]
+  path = repos/language-en-python
+  url = git@github.com:bablr-lang/language-en-python.git
+  branch = trunk
+
 [submodule "language-en-regex-vm-pattern"]
   path = repos/language-en-regex-vm-pattern
   url = git@github.com:bablr-lang/language-en-regex-vm-pattern.git
@@ -211,6 +226,11 @@
 [submodule "starlight"]
   path = repos/starlight
   url =  git@github.com:bablr-lang/starlight.git
+  branch = trunk
+
+[submodule "stream-helpers"]
+  path = repos/stream-helpers
+  url =  git@github.com:bablr-lang/stream-helpers.git
   branch = trunk
 
 [submodule "stream-iterator"]

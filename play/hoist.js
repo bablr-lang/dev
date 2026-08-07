@@ -1,13 +1,11 @@
 /* global global, console, URL, globalThis, process */
 
-import {
-  hoistTrivia,
-  printPrettyCSTML as printPrettyCSTMLStream,
-} from '@bablr/agast-helpers/stream';
+import { hoist, printCSTML as printCSTMLStream } from '@bablr/agast-helpers/stream';
 
 import { printTag } from '@bablr/agast-helpers/tree';
 import { CloseNodeTag, OpenNodeTag } from '@bablr/agast-helpers/symbols';
-import { parseTag, parseTagType } from '@bablr/agast-helpers/builders';
+import { parseTag, parseTagType } from '@bablr/agast-helpers/parsers';
+import { t } from '@bablr/helpers/grammar';
 global.printTag = printTag;
 
 Error.stackTraceLimit = 20;
@@ -213,27 +211,27 @@ let tags = function* () {
   // yield log(t`</>`);
   }
 
-  // yield log(t`<$_>`);
+  // yield log(t`<_>`);
   // yield log(t`  _:`);
-  // yield log(t`  <$Program>`);
+  // yield log(t`  <Program>`);
   // yield log(t`  </>`);
   // yield log(t`  #:`);
-  // yield log(t`  <$Trivia>`);
+  // yield log(t`  <Trivia>`);
   // yield log(t`  </>`);
   // yield log(t`</>`);
 
-  // yield log(t`<$_>`)
+  // yield log(t`<_>`)
   // yield log(t`  _:`)
-  // yield log(t`  <$_Expression>`)
+  // yield log(t`  <_Expression>`)
   // yield log(t`    _:`)
-  // yield log(t`    <$Array>`)
+  // yield log(t`    <Array>`)
   // yield log(t`      openToken*:`)
   // yield log(t`      <* '[' />`)
   // yield log(t`      #separatorTokens:`)
   // yield log(t`      <* ',' />`)
   // yield log(t`      #:`)
   // yield log(t`      :Space:`)
-  // yield log(t`      <$_Blank>`)
+  // yield log(t`      <_Blank>`)
   // yield log(t`        _:`)
   // yield log(t`        <*Space ' ' />`)
   // yield log(t`      </>`)
@@ -244,63 +242,77 @@ let tags = function* () {
   // yield log(t`</>`)
 
 
-  yield log(t`<$_>`);
-  yield log(t`  _:`);
-  yield log(t`  <$Program>`);
-  yield log(t`    body[]$:`);
-  yield log(t`    <$_Statement>`);
-  yield log(t`      _:`);
-  yield log(t`      <$FunctionDeclaration>`);
-  yield log(t`        sigilToken*:`);
-  yield log(t`        <*Keyword>`);
-  yield log(t`          'function'`);
-  yield log(t`        </>`);
-  yield log(t`        #:`);
-  yield log(t`        <* ' ' />`);
-  yield log(t`        name$:`);
-  yield log(t`        <$Identifier>`);
-  yield log(t`          value*:`);
-  yield log(t`          <*Literal 'streamParse' />`);
-  yield log(t`        </>`);
-  yield log(t`        openParamsToken*:`);
-  yield log(t`        <* '(' />`);
-  yield log(t`        params[]+$:`);
-  yield log(t`        params[]+$:`);
-  yield log(t`        <$_CapturePattern>`);
-  yield log(t`          _:`);
-  yield log(t`          <$Identifier>`);
-  yield log(t`            value*:`);
-  yield log(t`            <*Literal 'chrs' />`);
-  yield log(t`          </>`);
-  yield log(t`        </>`);
-  yield log(t`        closeParamsToken*:`);
-  yield log(t`        <* ')' />`);
-  yield log(t`        #:`);
-  yield log(t`        <* ' ' />`);
-  yield log(t`        body$:`);
-  yield log(t`        <$Block>`);
-  yield log(t`          openToken*:`);
-  yield log(t`          <* '{' />`);
-  yield log(t`          closeToken*:`);
-  yield log(t`          <* '}' />`);
-  yield log(t`        </>`);
-  yield log(t`      </>`);
-  yield log(t`    </>`);
-  yield log(t`  </>`);
-  yield log(t`  #:`);
-  yield log(t`  <$Trivia>`);
-  yield log(t`    .:`);
-  yield log(t`    :Space:`);
-  yield log(t`    <$_Blank>`);
-  yield log(t`      _:`);
-  yield log(t`      <*Newline '\n' />`);
-  yield log(t`    </>`);
-  yield log(t`  </>`);
-  yield log(t`</>`);
+  // yield log(t`<_>`);
+  // yield log(t`  _:`);
+  // yield log(t`  <Program>`);
+  // yield log(t`    body[]$:`);
+  // yield log(t`    <_Statement>`);
+  // yield log(t`      _:`);
+  // yield log(t`      <FunctionDeclaration>`);
+  // yield log(t`        sigilToken*:`);
+  // yield log(t`        <*Keyword>`);
+  // yield log(t`          'function'`);
+  // yield log(t`        </>`);
+  // yield log(t`        #:`);
+  // yield log(t`        <* ' ' />`);
+  // yield log(t`        name$:`);
+  // yield log(t`        <Identifier>`);
+  // yield log(t`          value*:`);
+  // yield log(t`          <*Literal 'streamParse' />`);
+  // yield log(t`        </>`);
+  // yield log(t`        openParamsToken*:`);
+  // yield log(t`        <* '(' />`);
+  // yield log(t`        params[]+$:`);
+  // yield log(t`        params[]+$:`);
+  // yield log(t`        <_CapturePattern>`);
+  // yield log(t`          _:`);
+  // yield log(t`          <Identifier>`);
+  // yield log(t`            value*:`);
+  // yield log(t`            <*Literal 'chrs' />`);
+  // yield log(t`          </>`);
+  // yield log(t`        </>`);
+  // yield log(t`        closeParamsToken*:`);
+  // yield log(t`        <* ')' />`);
+  // yield log(t`        #:`);
+  // yield log(t`        <* ' ' />`);
+  // yield log(t`        body$:`);
+  // yield log(t`        <Block>`);
+  // yield log(t`          openToken*:`);
+  // yield log(t`          <* '{' />`);
+  // yield log(t`          closeToken*:`);
+  // yield log(t`          <* '}' />`);
+  // yield log(t`        </>`);
+  // yield log(t`      </>`);
+  // yield log(t`    </>`);
+  // yield log(t`  </>`);
+  // yield log(t`  #:`);
+  // yield log(t`  <Trivia>`);
+  // yield log(t`    .:`);
+  // yield log(t`    :Space:`);
+  // yield log(t`    <_Blank>`);
+  // yield log(t`      _:`);
+  // yield log(t`      <*Newline '\n' />`);
+  // yield log(t`    </>`);
+  // yield log(t`  </>`);
+  // yield log(t`</>`);
+
+  yield log(`<__>`);
+  yield log(`#:`);
+  yield log(`.[]$:`);
+  yield log(`<_Tag>`);
+  yield log(`_:`);
+  yield log(`<CloseNodeTag>`);
+  yield log(`openToken*:`);
+  yield log(`<* '</' />`);
+  yield log(`closeToken*:`);
+  yield log(`<* '>' />`);
+  yield log(`</>`);
+  yield log(`</>`);
+  yield log(`</>`);
 };
 
 let indent = 0;
-for (let tag of hoistTrivia(tags())) {
+for (let tag of hoist(tags())) {
   let tagType = parseTagType(tag);
   if (tagType === CloseNodeTag) indent--;
   console.log('  '.repeat(indent) + printTag(tag));
@@ -309,4 +321,4 @@ for (let tag of hoistTrivia(tags())) {
 
 // console.log();
 
-// console.log(printPrettyCSTMLStream(tags()));
+// console.log(printCSTMLStream(tags()));

@@ -1,8 +1,0 @@
-<Array>
-  openToken*: <* '[' />
-  #: :Space:
-  <*Space '\n  ' />
-  <Number>
-  </>
-  closeToken*: <* ']' />
-</>
